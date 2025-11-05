@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>现代贪吃蛇游戏</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>贪吃蛇大作战</h1>
+            <div class="score-container">
+                <div class="score-item">
+                    <span class="score-label">当前分数:</span>
+                    <span id="current-score" class="score-value">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">最高分:</span>
+                    <span id="high-score" class="score-value">0</span>
+                </div>
+            </div>
+        </header>
+        
+        <main class="game-main">
+            <canvas id="gameCanvas" class="game-canvas"></canvas>
+            
+            <div id="startScreen" class="game-overlay">
+                <h2>准备开始</h2>
+                <p>使用方向键或WASD控制蛇的移动</p>
+                <p>吃到食物增加分数，但不要撞到墙壁或自己的身体</p>
+                <button id="startButton" class="game-button">开始游戏</button>
+            </div>
+            
+            <div id="gameOverScreen" class="game-overlay hidden">
+                <h2>游戏结束</h2>
+                <p>你的分数: <span id="finalScore"></span></p>
+                <button id="restartButton" class="game-button">再玩一次</button>
+            </div>
+        </main>
+        
+        <footer class="game-footer">
+            <p>&copy; 2023 贪吃蛇游戏 - 一个现代化的经典游戏重制版</p>
+        </footer>
+    </div>
+</body>
+</html>
